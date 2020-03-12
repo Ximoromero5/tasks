@@ -1,0 +1,12 @@
+<div class="card mt-3">
+    <div class="card-header d-flex align-items-center">
+        <h5 class="card-title">{{task.title}}</h5>
+        <div class="ml-auto">
+            <button class="btn btn-primary" (click)="task.hide = !task.hide">Show</button>
+            <button class="btn btn-danger ml-2" (click)="deleteTask(task)">Delete</button>
+        </div>
+    </div>
+    <div class="card-body" [hidden]="task.hide">
+        {{task.description}}
+    </div>
+</div>
