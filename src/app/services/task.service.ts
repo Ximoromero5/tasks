@@ -28,6 +28,7 @@ export class TaskService {
   addTask(task: Task) {
     this.tasks.push(task);
     let tasks: Task[] = [];
+
     if (localStorage.getItem('Tasks') === null) {
       tasks.push(task);
       localStorage.setItem('Tasks', JSON.stringify(tasks));
